@@ -20,6 +20,7 @@ async function register(req, res, next) {
       id: String(users.length + 1),
       name,
       email,
+      password: hash,
       role: "user"
     };
 
@@ -30,7 +31,12 @@ async function register(req, res, next) {
     return res.status(201).json({
       message: "Usuario creado",
       token,
-      user: newUser
+      user: {
+        id: newUser.id,
+        name: newUser.name,
+        email: newUser.email,
+        role: newUser.role
+      }
     });
   } catch (error) {
     next(error);
@@ -57,7 +63,12 @@ async function login(req, res, next) {
     return res.status(200).json({
       message: "Login correcto",
       token,
-      user
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role
+      }
     });
   } catch (error) {
     next(error);

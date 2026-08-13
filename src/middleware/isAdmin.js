@@ -6,3 +6,5 @@ function isAdmin(req, res, next) {
         return res.status(403).json({ message: "Acceso denegado: No eres administrador" });
     }
 }
+
+module.exports = isAdmin;

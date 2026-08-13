@@ -3,7 +3,7 @@ const users = [
     id: "1",
     name: "Admin",
     email: "admin@market.local",
-    password: "$2a$10$RN6I0Qn3xwA4fMsFvP5x0.KYjRzCQXDpUe1koXSPoaqe7iT730cdG",
+    password: "$2a$10$slYQmyNdGzin7olVN3p1OPST9/PgBkqx8d/LewY5YksVz57/Lixfm",
     role: "admin"
   }
 ];
